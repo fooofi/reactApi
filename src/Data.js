@@ -26,6 +26,9 @@ function Data(){
 
 if(data){
   const brand = group(data, 'brand')
+  for (let i in brand){
+    brand[i].unshift('totalProducts: '+brand[i].length)
+  }
   console.log(brand)
 }
 
